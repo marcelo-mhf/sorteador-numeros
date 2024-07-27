@@ -1,4 +1,8 @@
 function sortear(){
+    let verificaBotao = document.getElementById("btn-sortear");
+    if (verificaBotao.classList.contains('container__botao-desabilitado')) {
+        return;
+    }
     let quantidade = parseInt(document.getElementById("quantidade").value);  //parseInt retorna um número inteiro. "getElementById" busca um elemento HTML pelo código "id"
     let de = parseInt(document.getElementById("de").value);
     let ate = parseInt(document.getElementById("ate").value);
@@ -67,6 +71,10 @@ function alterarStatusBotao() {
 }
 
 function reiniciar() {
+    let verificaBotao2 = document.getElementById("btn-reiniciar");
+    if (verificaBotao2.classList.contains('container__botao-desabilitado')) {
+        return;
+    }
     document.getElementById("quantidade").value = '';
     document.getElementById("de").value = '';
     document.getElementById("ate").value = '';
