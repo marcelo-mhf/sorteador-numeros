@@ -3,6 +3,17 @@ function sortear(){
     let de = parseInt(document.getElementById("de").value);
     let ate = parseInt(document.getElementById("ate").value);
 
+    if (!quantidade || !de || !ate ){                                       //colocar ! antes da variável verifica se ela está "null"
+        alert("Parâmetros não informados completamente. Verifique");
+        return;
+    }else { 
+        if (de > ate || quantidade > (ate - de)) {
+            alert("Parâmetros incorretos. Verifique.");
+            return;
+        }
+
+    }
+
     console.log(`Sortear ${quantidade} número(s) entre ${de} e ${ate}.`);
 
                                                                             // console.log(`Número sorteado: ${numero}.`);
